@@ -106,7 +106,7 @@
                    bitRate="1200000"
                    width="352"
                    height="288"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
@@ -116,9 +116,9 @@
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
@@ -130,19 +130,7 @@
                    bitRate="8000000"
                    width="1280"
                    height="720"
-                   frameRate="30" />
-            <Audio codec="aac"
-                   bitRate="96000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
-
-        <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="12000000"
-                   width="1920"
-                   height="1088"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
@@ -154,7 +142,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -167,7 +155,7 @@
                    bitRate="1200000"
                    width="352"
                    height="288"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="96000"
@@ -178,9 +166,9 @@
         <EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="96000"
@@ -193,20 +181,7 @@
                    bitRate="8000000"
                    width="1280"
                    height="720"
-                   frameRate="30" />
-            <!-- audio setting is ignored -->
-            <Audio codec="aac"
-                   bitRate="96000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
-
-        <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="12000000"
-                   width="1920"
-                   height="1088"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="96000"
@@ -240,7 +215,7 @@
                    bitRate="1200000"
                    width="352"
                    height="288"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
@@ -250,21 +225,9 @@
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
-                   frameRate="30" />
-            <Audio codec="aac"
-                   bitRate="96000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
-
-        <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="8000000"
-                   width="1280"
-                   height="720"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
@@ -276,7 +239,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -289,7 +252,7 @@
                    bitRate="1200000"
                    width="352"
                    height="288"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="96000"
@@ -300,22 +263,9 @@
         <EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="5000000"
-                   width="720"
+                   width="640"
                    height="480"
-                   frameRate="30" />
-            <!-- audio setting is ignored -->
-            <Audio codec="aac"
-                   bitRate="96000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
-
-        <EncoderProfile quality="timelapse720p" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="8000000"
-                   width="1280"
-                   height="720"
-                   frameRate="30" />
+                   frameRate="31" />
             <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="96000"
@@ -338,69 +288,46 @@
          In other words, the applications won't be able to use the codec
          or query the capabilities of the codec at all if it is disabled
     -->
-    <VideoEncoderCap name="h264" enabled="true"
-        minBitRate="64000" maxBitRate="12000000"
-        minFrameWidth="176" maxFrameWidth="1920"
-        minFrameHeight="144" maxFrameHeight="1088"
-        minFrameRate="15" maxFrameRate="30" />
+  <VideoEncoderCap name="h264" enabled="true"
+      minBitRate="64000" maxBitRate="20000000"
+      minFrameWidth="176" maxFrameWidth="1920"
+      minFrameHeight="144" maxFrameHeight="1080"
+      minFrameRate="1" maxFrameRate="30" />
 
-    <VideoEncoderCap name="h263" enabled="true"
-        minBitRate="64000" maxBitRate="4000000"
-        minFrameWidth="176" maxFrameWidth="1920"
-        minFrameHeight="144" maxFrameHeight="1088"
-        minFrameRate="15" maxFrameRate="30" />
+  <VideoEncoderCap name="h263" enabled="true"
+      minBitRate="64000" maxBitRate="2000000"
+      minFrameWidth="176" maxFrameWidth="800"
+      minFrameHeight="144" maxFrameHeight="480"
+      minFrameRate="1" maxFrameRate="30" />
 
-    <VideoEncoderCap name="m4v" enabled="true"
-        minBitRate="64000" maxBitRate="4000000"
-        minFrameWidth="176" maxFrameWidth="1920"
-        minFrameHeight="144" maxFrameHeight="1088"
-        minFrameRate="15" maxFrameRate="30" />
+  <VideoEncoderCap name="m4v" enabled="true"
+      minBitRate="64000" maxBitRate="20000000"
+      minFrameWidth="176" maxFrameWidth="1920"
+      minFrameHeight="144" maxFrameHeight="1080"
+      minFrameRate="1" maxFrameRate="30" />
 
-    <AudioEncoderCap name="aac" enabled="true"
-        minBitRate="8000" maxBitRate="96000"
-        minSampleRate="8000" maxSampleRate="48000"
-        minChannels="1" maxChannels="1" />
+  <AudioEncoderCap name="aac" enabled="true"
+      minBitRate="8000" maxBitRate="156000"
+      minSampleRate="8000" maxSampleRate="48000"
+      minChannels="1" maxChannels="2" />
 
-    <AudioEncoderCap name="amrwb" enabled="true"
+  <AudioEncoderCap name="amrwb" enabled="true"
         minBitRate="6600" maxBitRate="23050"
         minSampleRate="16000" maxSampleRate="16000"
         minChannels="1" maxChannels="1" />
 
-    <AudioEncoderCap name="amrnb" enabled="true"
-        minBitRate="5525" maxBitRate="12200"
-        minSampleRate="8000" maxSampleRate="8000"
-        minChannels="1" maxChannels="1" />
+  <AudioEncoderCap name="amrnb" enabled="true"
+      minBitRate="4750" maxBitRate="12200"
+      minSampleRate="8000" maxSampleRate="8000"
+      minChannels="1" maxChannels="1" />
 
-    <!--
-        FIXME:
-        We do not check decoder capabilities at present
-        At present, we only check whether windows media is visible
-        for TEST applications. For other applications, we do
-        not perform any checks at all.
-    -->
-    <VideoDecoderCap name="wmv" enabled="false"/>
-    <AudioDecoderCap name="wma" enabled="false"/>
-    <VideoEditorCap maxInputFrameWidth="1920"
-        maxInputFrameHeight="1088" maxOutputFrameWidth="1920"
-        maxOutputFrameHeight="1088" maxPrefetchYUVFrames="1" />
-    <!--
-        The VideoEditor Export codec profile and level values
-        correspond to the values in OMX_Video.h.
-        E.g. for h264, profile value 1 means OMX_VIDEO_AVCProfileBaseline
-        and  level 4096 means OMX_VIDEO_AVCLevel41.
-        Please note that the values are in decimal.
-        These values are for video encoder.
-    -->
-    <!--
-      Codec = h.264, Baseline profile, level 4.1
-    -->
-    <ExportVideoProfile name="h264" profile= "1" level="4096"/>
-    <!--
-      Codec = h.263, Baseline profile, level 0
-    -->
-    <ExportVideoProfile name="h263" profile= "1" level="1"/>
-    <!--
-      Codec = mpeg4, Simple profile, level 3
-    -->
-    <ExportVideoProfile name="m4v" profile= "1" level="16"/>
+  <VideoDecoderCap name="wmv" enabled="false"/>
+  <AudioDecoderCap name="wma" enabled="false"/>
+
+  <VideoEditorCap maxInputFrameWidth="1280" maxInputFrameHeight="720" maxOutputFrameWidth="1280" maxOutputFrameHeight="720" maxPrefetchYUVFrames="3" />
+
+  <ExportVideoProfile name="h263" profile="1" level="1"/>
+  <ExportVideoProfile name="h264" profile="1" level="1"/>
+  <ExportVideoProfile name="m4v" profile="1" level="1"/>
+
 </MediaSettings>

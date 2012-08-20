@@ -31,7 +31,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE -DLEGACY_QCOM_VOICE
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DLEGACY_QCOM_VOICE
 
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
@@ -51,12 +51,12 @@ WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/vendor/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
+
 # Audio
 #COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
 #TARGET_USES_QCOM_LPA := true
-
-COMMON_GLOBAL_CFLAGS += -DQCOM_ICS_COMPAT -DHTC_ACOUSTIC_AUDIO
-COMMON_GLOBAL_CFLAGS += -DQCOM_ACDB_ENABLED
+COMMON_GLOBAL_CFLAGS += -DHTC_ACOUSTIC_AUDIO
+COMMON_GLOBAL_CFLAGS += -DQCOM_ACDB_ENABLED -DLEGACY_QCOM_VOICE
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -69,17 +69,15 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Graphics
 USE_OPENGL_RENDERER := true
-TARGET_HAVE_BYPASS := false
 TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_OVERLAY := true
-TARGET_QCOM_HDMI_OUT := true
-TARGET_QCOM_HDMI_RESOLUTION_AUTO := true
 BOARD_EGL_CFG := device/htc/msm8660-common/configs/egl.cfg
+TARGET_NO_HW_VSYNC := true
 
+# Camera
+COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB
 BOARD_USES_HTC_CAMERA := true
-BOARD_HAVE_HTC_FFC := true
-COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 BOARD_NEEDS_MEMORYHEAPPMEM := true
+TARGET_DISABLE_ARM_PIE := true
 
 # Filesystem
 BOARD_VOLD_MAX_PARTITIONS := 36
@@ -90,10 +88,14 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Webkit
 ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
-DYNAMIC_SHARED_LIBV8SO := true
+#TARGET_FORCE_CPU_UPLOAD := true
+#DYNAMIC_SHARED_LIBV8SO := true
 
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 
 TARGET_KERNEL_SOURCE := kernel/htc/msm8660
+
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
