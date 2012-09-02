@@ -41,7 +41,11 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libQcomUI \
     libtilerenderer \
-    libstagefright_client
+    libI420colorconvert
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8660
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -101,7 +105,8 @@ PRODUCT_COPY_FILES += \
 # Common Qualcomm scripts
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-    device/htc/msm8660-common/prebuilt/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh
+    device/htc/msm8660-common/prebuilt/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
+    device/htc/msm8660-common/prebuilt/89badass:system/etc/init.d/89badass
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

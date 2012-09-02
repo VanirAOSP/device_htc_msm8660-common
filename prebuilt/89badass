@@ -1,0 +1,13 @@
+#!/system/bin/sh
+
+#balanced badass configuration
+echo 918000 > /sys/devices/system/cpu/cpufreq/badass/two_phase_freq
+echo 1188000 > /sys/devices/system/cpu/cpufreq/badass/three_phase_freq
+echo 130 > /sys/devices/system/cpu/cpufreq/badass/busy_threshold
+echo 100 > /sys/devices/system/cpu/cpufreq/badass/busy_clr_threshold
+echo 14 > /sys/devices/system/cpu/cpufreq/badass/semi_busy_threshold
+echo 6 > /sys/devices/system/cpu/cpufreq/badass/semi_busy_clr_threshold
+echo 260 > /sys/devices/system/cpu/cpufreq/badass/gpu_semi_busy_threshold
+echo 180 > /sys/devices/system/cpu/cpufreq/badass/gpu_semi_busy_clr_threshold
+echo 700 > /sys/devices/system/cpu/cpufreq/badass/gpu_busy_threshold
+echo 500 > /sys/devices/system/cpu/cpufreq/badass/gpu_busy_clr_threshold
