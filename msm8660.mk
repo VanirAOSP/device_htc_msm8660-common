@@ -51,20 +51,22 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libmemalloc \
     liboverlay \
-    libQcomUI \
-    libtilerenderer
+    libqdutils \
+    libtilerenderer \
+    libI420colorconvert
 
 # OMX
 PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
-    libI420colorconvert \
     libmm-omxcore \
     libOmxCore \
+    libstagefrighthw \
     libOmxVdec \
     libOmxVenc \
     libOmxAacEnc \
     libOmxAmrEnc \
-    libstagefrighthw
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc
 
 # HDMI
 PRODUCT_PACKAGES += \
