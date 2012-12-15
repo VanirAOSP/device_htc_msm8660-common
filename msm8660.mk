@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8660 \
     libaudioutils
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8660
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8660 \
