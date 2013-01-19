@@ -70,10 +70,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc
 
-# Camera
-PRODUCT_PACKAGES += \
-    camera.msm8660
-
 # HDMI
 PRODUCT_PACKAGES += \
     hdmid
