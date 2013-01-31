@@ -54,8 +54,7 @@ PRODUCT_PACKAGES += \
     libmemalloc \
     liboverlay \
     libqdutils \
-    libtilerenderer \
-    libI420colorconvert
+    libtilerenderer
 
 # OMX
 PRODUCT_PACKAGES += \
