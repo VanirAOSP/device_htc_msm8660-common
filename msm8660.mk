@@ -14,7 +14,6 @@
 
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
-    device/htc/msm8660-common/prebuilt/89bruce:system/etc/init.d/89bruce \
     device/htc/msm8660-common/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
     device/htc/msm8660-common/prebuilt/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh
 
