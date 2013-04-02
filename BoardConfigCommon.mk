@@ -28,7 +28,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_CPU := cortex-a8
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
@@ -38,6 +38,9 @@ TARGET_ARCH := arm
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+
+# FB legacy
+BOARD_EGL_NEEDS_LEGACY_FB := true
 
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
@@ -80,7 +83,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 # Graphics
 # TARGET_USES_ION := true
 # BOARD_HAVE_OLD_ION_API := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
+COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK -DQCOM_ROTATOR_KERNEL_FORMATS
 USE_OPENGL_RENDERER := true
 TARGET_NO_HW_VSYNC := true
 TARGET_USES_C2D_COMPOSITION := true
@@ -104,4 +107,4 @@ BOARD_LEGACY_NL80211_STA_EVENTS := true
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
-TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a8) $(call cc-option,-mcpu=cortex-a8)
