@@ -43,7 +43,6 @@ PRODUCT_PACKAGES += \
     audio_policy.msm8660 \
     audio.primary.msm8660 \
     libaudioutils \
-    audio_policy.conf
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -86,6 +85,10 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+# Media configuration
+PRODUCT_COPY_FILES += \
+    device/htc/msm8660-common/configs/audio_policy.conf:system/etc/audio_policy.conf
+	
 # MSM8660 firmware
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
