@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+BOARD_VENDOR := htc
+
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm8660-common/include
 
 # Bootloader
@@ -27,11 +29,10 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
-
-TARGET_ARCH := arm
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
