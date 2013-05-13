@@ -110,7 +110,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
+    debug.enabletr=true \ 
     debug.egl.hw=1 \
+    debug.mdpcomp.maxlayer=0 \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
