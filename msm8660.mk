@@ -54,7 +54,6 @@ PRODUCT_PACKAGES += \
     copybit.msm8660 \
     gralloc.msm8660 \
     hwcomposer.msm8660 \
-    lights.msm8660 \
     libgenlock \
     libmemalloc \
     liboverlay \
