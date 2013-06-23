@@ -103,6 +103,10 @@ static char * camera_fixup_getparams(int id, const char * settings)
     {
         params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, previewSizesStr[id]);
         params.set(android::CameraParameters::KEY_PREVIEW_FRAME_RATE, "30");
+        params.set(android::CameraParameters::KEY_ANTIBANDING, "auto");
+        params.set(android::CameraParameters::KEY_AUTO_EXPOSURE, "center-weighted");
+        params.set(android::CameraParameters::KEY_SCENE_DETECT, "on");
+        params.set(android::CameraParameters::KEY_SKIN_TONE_ENHANCEMENT, "enable");
     }
 
     android::String8 strParams = params.flatten();
