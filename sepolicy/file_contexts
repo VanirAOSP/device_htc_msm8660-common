@@ -49,8 +49,6 @@
 /dev/akm8975_aot               u:object_r:sensors_device:s0
 /dev/cm3602                    u:object_r:sensors_device:s0
 /dev/lightsensor               u:object_r:sensors_device:s0
-/dev/mpu                       u:object_r:sensors_device:s0
-/dev/mpuirq                    u:object_r:sensors_device:s0
 /dev/timerirq                  u:object_r:sensors_device:s0
 
 /dev/mdm                       u:object_r:radio_device:s0
