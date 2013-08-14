@@ -76,6 +76,10 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxAmrEnc
 
+PRODUCT_PACKAGES += \
+    libnetcmdiface \
+    libsurfaceflinger_client
+
 # HDMI
 PRODUCT_PACKAGES += \
     hdmid
