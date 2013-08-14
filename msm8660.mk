@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
 
 # Camera wrapper
 PRODUCT_PACKAGES += \
-    camera.8660
+    camera.msm8660
 	
 # Graphics
 PRODUCT_PACKAGES += \
