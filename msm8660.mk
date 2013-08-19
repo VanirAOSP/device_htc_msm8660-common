@@ -44,6 +44,8 @@ PRODUCT_PACKAGES += \
     audio_policy.msm8660 \
     audio.primary.msm8660 \
     libaudioutils \
+    audio.usb.default \
+    libaudio-resampler \
     audio_policy.conf
 
 # Camera wrapper
@@ -79,10 +81,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface \
     libsurfaceflinger_client
-
-# HDMI
-PRODUCT_PACKAGES += \
-    hdmid
 
 # Torch
 PRODUCT_PACKAGES += \
