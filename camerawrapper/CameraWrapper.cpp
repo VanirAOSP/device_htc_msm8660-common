@@ -104,6 +104,17 @@ static char * camera_fixup_getparams(int id, const char * settings)
         params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, previewSizesStr[id]);
         params.set(android::CameraParameters::KEY_PREVIEW_FRAME_RATE, "30");
         params.set(android::CameraParameters::KEY_AUTO_EXPOSURE_LOCK, "false");
+	params.set(android::CameraParameters::KEY_ANTIBANDING, "auto");
+	params.set(android::CameraParameters::KEY_AUTO_EXPOSURE, "frame-average");
+	params.set(android::CameraParameters::KEY_SCENE_DETECT, "on");
+	params.set(android::CameraParameters::KEY_SKIN_TONE_ENHANCEMENT, "enable");
+        params.set(android::CameraParameters::KEY_FOCAL_LENGTH, "3.49");
+        params.set(android::CameraParameters::KEY_FOCUS_DISTANCES, "1.000000,32.000000,32.000000");
+        params.set(android::CameraParameters::KEY_SCENE_DETECT, "on");
+        params.set(android::CameraParameters::KEY_TOUCH_AF_AEC, "touch-on");
+        params.set(android::CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "54.4");
+        params.set(android::CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "42.2");
+
     }
 
     android::String8 strParams = params.flatten();
