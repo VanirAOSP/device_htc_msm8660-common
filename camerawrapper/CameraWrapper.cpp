@@ -103,6 +103,7 @@ static char * camera_fixup_getparams(int id, const char * settings)
     {
         params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, previewSizesStr[id]);
         params.set(android::CameraParameters::KEY_PREVIEW_FRAME_RATE, "30");
+        params.set(android::CameraParameters::KEY_AUTO_EXPOSURE_LOCK, "false");
     }
 
     android::String8 strParams = params.flatten();
@@ -119,6 +120,9 @@ char * camera_fixup_setparams(int id, const char * settings)
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
+    
+    //Workaround for crash when touch to focus is used with flash on.
+    params.set(android::CameraParameters::KEY_AUTO_EXPOSURE_LOCK, "false");
 
     ALOGD("%s: set parameters fixed up", __FUNCTION__);
     return ret;
