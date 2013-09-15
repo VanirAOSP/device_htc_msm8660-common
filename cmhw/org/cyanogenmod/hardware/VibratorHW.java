@@ -21,7 +21,7 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class VibratorHW {
 
-    private static String AMP_PATH = "sys/devices/platform/msm_ssbi.0/pm8058-core/pm8xxx-vib/amp";
+    private static String AMP_PATH = "/sys/devices/platform/msm_ssbi.0/pm8058-core/pm8xxx-vib/amp";
 
     public static boolean isSupported() {
         return new File(AMP_PATH).exists();
