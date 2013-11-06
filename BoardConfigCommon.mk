@@ -71,39 +71,6 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/htc/msm8660-common/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    property_contexts \
-    te_macros \
-    bridge.te \
-    camera.te \
-    conn_init.te \
-    device.te \
-    dhcp.te \
-    domain.te \
-    drmserver.te \
-    file.te \
-    kickstart.te \
-    init.te \
-    mediaserver.te \
-    mpdecision.te \
-    netmgrd.te \
-    property.te \
-    qmux.te \
-    rild.te \
-    rmt.te \
-    sensors.te \
-    surfaceflinger.te \
-    system.te \
-    tee.te \
-    thermald.te \
-    ueventd.te \
-    wpa_supplicant.te
-
 # Graphics
 TARGET_QCOM_DISPLAY_VARIANT := legacy
 BOARD_USES_LEGACY_MEDIA := true
