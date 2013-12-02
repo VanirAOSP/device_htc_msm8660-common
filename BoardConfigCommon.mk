@@ -109,9 +109,5 @@ BOARD_LEGACY_NL80211_STA_EVENTS := true
 TARGET_PROVIDES_LIBLIGHT := true
 TARGET_PROVIDES_LIBLIGHTS := true
 
-# Webkit
-ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
-
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/htc/msm8660-common/cmhw
